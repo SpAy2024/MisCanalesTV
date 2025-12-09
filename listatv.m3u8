@@ -1,9 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="cctv1.cn" tvg-logo="https://distro.tv/img/long_logo.png" group-title="Crimen",Distro tv
-https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/crime-and-evidence/2c8af0af-5871-414f-ab66-9a028771c9e1/0.m3u8
-#EXTINF:-1 tvg-id="espn.us" tvg-logo="https://distro.tv/img/long_logo.png" group-title="Romance",DISTRO
-
-https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/romance-channel/b664c533-1239-4c7b-95ed-8879caa6869e/0.m3u8
 
 #EXTINF:-1 tvg-id="ATBSantaCruz.bo" tvg-logo="https://i.imgur.com/E243X2x.png" group-title="General",ATB Santa Cruz
 https://cdn.digital.com.bo/__cl/cg:sworigin2/__c/ATB/__op/hls-default/__f/index.m3u8
@@ -186,3 +181,11 @@ https://streamtv.onliv3.online:1936/exito-tv/exito-tv/playlist.m3u8
 https://live-01-01-tn.vodgc.net/TN24/index.m3u8
 #EXTINF:-1 ,Nmax noticias 
 https://channel02-notusa.akamaized.net/hls/live/2023914/event01/index_1.m3u8
+
+#EXTINF:-1 tvg-id="cctv1.cn" tvg-logo="https://distro.tv/img/long_logo.png" group-title="Crimen",Distro tv
+https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/crime-and-evidence/2c8af0af-5871-414f-ab66-9a028771c9e1/0.m3u8
+#EXTINF:-1 tvg-id="espn.us" tvg-logo="https://distro.tv/img/long_logo.png" group-title="Romance",DISTRO
+
+https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/romance-channel/b664c533-1239-4c7b-95ed-8879caa6869e/0.m3u8
+
+
