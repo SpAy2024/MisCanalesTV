@@ -1,0 +1,153 @@
+#EXTM3U x-tvg-url="https://i.mjh.nz/Peacock/epg.xml"
+# -*- coding: utf-8 -*-
+# Lista combinada para IPTV Smarters Pro
+# Canales LIVE + Películas VOD + Series VOD
+# URL: https://spay2024.github.io/MisCanalesTV/todocanales.m3u8
+
+############################################
+# SECCIÓN 1: CANALES EN VIVO (LIVE TV)
+############################################
+#PLAYLIST:LIVE TV
+
+#EXTINF:-1 tvg-id="ATBSantaCruz.bo" tvg-logo="https://i.imgur.com/E243X2x.png" group-title="LIVE: General",ATB Santa Cruz
+https://cdn.digital.com.bo/__cl/cg:sworigin2/__c/ATB/__op/hls-default/__f/index.m3u8
+
+#EXTINF:-1 tvg-id="BoliviaRadioTV.bo" tvg-logo="https://i.imgur.com/rW8xssX.png" group-title="LIVE: General",Bolivia Radio TV
+https://glb.bozztv.com/glb/ssh101/boliviaradiotv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BoliviaTV.bo" tvg-logo="https://i.imgur.com/tKLYYys.png" group-title="LIVE: General",Bolivia TV
+http://boliviatv1.srfms.com:5735/live/livestream/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BoliviaTV72.bo" tvg-logo="https://i.imgur.com/tKLYYys.png" group-title="LIVE: General",Bolivia TV 7.2
+https://5ca3e84a76d30.streamlock.net/boliviatv2/videoboliviatv2/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Bolivision.bo" tvg-logo="https://i.imgur.com/U98Z5zn.png" group-title="LIVE: General",Bolivision
+https://alba-bo-bolivision-bolivision.stream.mediatiquestream.com/index.m3u8
+
+#EXTINF:-1 tvg-id="CadenaA.bo" tvg-logo="https://i.imgur.com/BxQPPAA.png" group-title="LIVE: General",Cadena A
+https://5fe2654d6127d.streamlock.net/cadenaa/videocadenaa/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal29TVA.bo" tvg-logo="https://i.imgur.com/y3bymuv.jpg" group-title="LIVE: Religión",Canal 29 TVA
+https://vdo.grupolimalive.com:3967/live/tvelive.m3u8
+
+#EXTINF:-1 tvg-id="CineramaTelevision.bo" tvg-logo="https://play-lh.googleusercontent.com/RJ49IeJve4VPALBXqrqJGeAYOEoLQIZZ4zWwtJhofisng6ZYwGemZ-VXCx9ZQ-u7fw" group-title="LIVE: Entretenimiento",Cinerama Television
+https://5d00db0e0fcd5.streamlock.net/7062/7062/playlist.m3u8
+
+#EXTINF:-1 tvg-id="DTPlay.bo" tvg-logo="https://i.imgur.com/2nVIjho.png" group-title="LIVE: Deportes",DT Play
+https://tv.portalexpress.es:3044/live/dtplaylive.m3u8
+
+#EXTINF:-1 tvg-id="Erbol.bo" tvg-logo="https://i.imgur.com/hn1KI7t.png" group-title="LIVE: Noticias",Erbol
+https://cloud2.streaminglivehd.com:1936/8182/8182/playlist.m3u8
+
+#EXTINF:-1 tvg-id="F10HD.bo" tvg-logo="https://i.imgur.com/OEsT0KN.png" group-title="LIVE: General",F10 HD
+https://video.live.com.bo:3099/live/f10hdlive.m3u8
+
+#EXTINF:-1 tvg-id="FAPTV.bo" tvg-logo="https://i.imgur.com/jZ7g58e.png" group-title="LIVE: General",FAP TV
+https://nd106.republicaservers.com/hls/c7284/index.m3u8
+
+#EXTINF:-1 tvg-id="Gigavision.bo" tvg-logo="https://i.imgur.com/fE3BkcT.png" group-title="LIVE: General",Gigavision
+https://master.tucableip.com/gigavision/playlist.m3u8
+
+#EXTINF:-1 tvg-id="MegaTV.bo" tvg-logo="https://i.imgur.com/3d4uiZF.png" group-title="LIVE: Entretenimiento",MegaTV
+https://solo.disfrutaenlared.com:1936/tvcbba/tvcbba/playlist.m3u8
+
+#EXTINF:-1 tvg-id="PATLaPaz.bo" tvg-logo="https://i.imgur.com/4A7R2Jt.png" group-title="LIVE: General",PAT La Paz
+https://w8.redpat.tv:7777/play/120/index.m3u8
+
+#EXTINF:-1 tvg-id="PATSantaCruz.bo" tvg-logo="https://i.imgur.com/4A7R2Jt.png" group-title="LIVE: General",PAT Santa Cruz
+https://w8.redpat.tv:7777/play/110/index.m3u8
+
+#EXTINF:-1 tvg-id="PTV.bo" tvg-logo="https://i.imgur.com/vPvR7dX.png" group-title="LIVE: General",PTV
+https://glb.bozztv.com/glb/ssh101/centralptv/index.m3u8
+
+#EXTINF:-1 tvg-id="RadioUnoPST.bo" tvg-logo="https://i.imgur.com/TmSNZTg.jpg" group-title="LIVE: General",Radio Uno PST
+https://master.tucableip.com/pstbolivia/video.m3u8
+
+#EXTINF:-1 tvg-id="RedAmericaTV.bo" tvg-logo="https://i.imgur.com/qYNmeDe.png" group-title="LIVE: General",Red America TV
+https://videostream.shockmedia.com.ar:19360/redamericatv/redamericatv.m3u8
+
+#EXTINF:-1 tvg-id="RedDTV.bo" tvg-logo="https://i.imgur.com/fK0g2CK.png" group-title="LIVE: General",Red DTV
+https://master.tucableip.com/dtvsc/playlist.m3u8
+
+#EXTINF:-1 tvg-id="RedUno.bo" tvg-logo="https://i.imgur.com/wfNaEV9.png" group-title="LIVE: General",Red Uno
+https://streamer03.digital.com.bo/session/4e839498-b325-47f7-987f-205b4831346f/2ap337/__cl/cg:sworigin2/__c/REDUNO/__op/hls-default/__f/index.m3u8
+
+#EXTINF:-1 tvg-id="RTP.bo" tvg-logo="https://i.imgur.com/cECNvvr.png" group-title="LIVE: General",RTP
+http://136.243.3.70:1935/RtpBolivia/RtpBolivia/playlist.m3u8
+
+#EXTINF:-1 tvg-id="SEOTV1FHD.bo" tvg-logo="https://i.imgur.com/aTcJ5p3.png" group-title="LIVE: General",SEO TV 1 FHD
+https://seo.tv.bo/tv/SEOTV_1FHD.m3u8
+
+#EXTINF:-1 tvg-id="SEOTV2Kids.bo" tvg-logo="https://i.imgur.com/BC0Ii7i.png" group-title="LIVE: Infantil",SEO TV 2 Kids
+https://seo.tv.bo/tv/CTV2.m3u8
+
+#EXTINF:-1 tvg-id="SEOTV3Novelas.bo" tvg-logo="https://i.imgur.com/aTcJ5p3.png" group-title="LIVE: Series",SEO TV 3 Novelas
+https://seo.tv.bo/tv/SEOTV3.m3u8
+
+#EXTINF:-1 tvg-id="SEOTV4Peliculas.bo" tvg-logo="https://i.imgur.com/aTcJ5p3.png" group-title="LIVE: Películas",SEO TV 4 Peliculas
+https://seo.tv.bo/tv/SEOTV4_HD.m3u8
+
+#EXTINF:-1 tvg-id="SEOTV5Deportes.bo" tvg-logo="https://i.imgur.com/N56B7si.png" group-title="LIVE: Deportes",SEO TV 5 Deportes
+https://seo.tv.bo/tv/SEOtv_5sd.m3u8
+
+#EXTINF:-1 tvg-id="SEOTV7.bo" tvg-logo="https://i.imgur.com/aTcJ5p3.png" group-title="LIVE: Comedia",SEO TV 7
+https://seo.tv.bo/tv/SEOTV7.m3u8
+
+#EXTINF:-1 tvg-id="TelevisionCristal.bo" tvg-logo="https://i.ibb.co/pdTCdWj/logo-cristal-fw.png" group-title="LIVE: General",Television Cristal
+https://srv5.elittehosting.com:3369/live/cristaltvlive.m3u8
+
+#EXTINF:-1 tvg-id="TLEstrella.bo" tvg-logo="https://www.lyngsat.com/logo/tv/tt/tl-estrella-bo.png" group-title="LIVE: General",TL Estrella
+https://stmvideo3.livecastv.com/teleestrellahd/teleestrellahd/playlist.m3u8
+
+#EXTINF:-1 tvg-id="TVHDTropical.bo" tvg-logo="https://i.imgur.com/0zJi12h.png" group-title="LIVE: Música",TV HD Tropical
+https://cloud2.streaminglivehd.com:19360/8060/8060.m3u8
+
+#EXTINF:-1 tvg-id="TVLatina.bo" tvg-logo="https://i.imgur.com/V6wxEdh.png" group-title="LIVE: General",TV Latina
+https://glb.bozztv.com/glb/ssh101/tvlatinared/index.m3u8
+
+#EXTINF:-1 tvg-id="TVShowOruro.bo" tvg-logo="https://i.ibb.co/nnsYJCq/IMG-20210731-094609.png" group-title="LIVE: General",TV Show Oruro
+http://tv.istbolivia.com:1935/tvshow/tvshow/playlist.m3u8
+
+#EXTINF:-1 tvg-id="TVU.bo" tvg-logo="https://i.imgur.com/YdiF5k6.png" group-title="LIVE: General",TVU
+https://video.live.com.bo:3003/live/tvuumsalive.m3u8
+
+#EXTINF:-1 tvg-id="UnitelSantaCruz.bo" tvg-logo="https://i.imgur.com/B9wg1zj.png" group-title="LIVE: General",Unitel Santa Cruz
+https://cdn.digital.com.bo/__cl/cg:sworigin2/__c/UNITEL/__op/hls-default/__f/index.m3u8
+
+#EXTINF:-1 tvg-id="UnivalleTelevision.bo" tvg-logo="https://i.imgur.com/qgrWDIs.png" group-title="LIVE: General",Univalle Television
+https://master.tucableip.com/univalletv/playlist.m3u8
+
+############################################
+# SECCIÓN 2: PELÍCULAS (VOD)
+############################################
+#PLAYLIST:PELÍCULAS
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/vK1sK1B3WglfgVWPn6Xj4nNsw1q.jpg" group-title="VOD: Acción",🎬 Gladiator II (2024)
+https://firebasestorage.googleapis.com/v0/b/cienciaficcion-ec1b6.appspot.com/o/CienciaFiccion%2F12%20horas%20para%20el%20fin%20del%20mundo%20(2022).mp4?alt=media&token=83286a59-38ce-4ef7-8414-3fa5a4a0838e
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/dpskAcm71w5v8zQ8RmPmJiP31Om.jpg" group-title="VOD: Drama",🎬 Película de Drama (2023)
+https://firebasestorage.googleapis.com/v0/b/cienciaficcion-ec1b6.appspot.com/o/CienciaFiccion%2F12%20horas%20para%20el%20fin%20del%20mundo%20(2022).mp4?alt=media&token=83286a59-38ce-4ef7-8414-3fa5a4a0838e
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/abf8tHznhSvl9BAElD2cQeRr7do.jpg" group-title="VOD: Ciencia Ficción",🎬 12 Horas para el Fin del Mundo (2022)
+https://firebasestorage.googleapis.com/v0/b/cienciaficcion-ec1b6.appspot.com/o/CienciaFiccion%2F12%20horas%20para%20el%20fin%20del%20mundo%20(2022).mp4?alt=media&token=83286a59-38ce-4ef7-8414-3fa5a4a0838e
+
+# Agregar más películas aquí...
+
+############################################
+# SECCIÓN 3: SERIES (VOD)
+############################################
+#PLAYLIST:SERIES
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/vVpEOvdxVBP2aV166j5Xlvb5Cdc.jpg" group-title="VOD: Drama" series-title="Breaking Bad",📺 Breaking Bad S01E01 - Piloto
+https://archive.org/download/BreakingBadS01E01/Breaking%20Bad%20S01E01.mp4
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/vVpEOvdxVBP2aV166j5Xlvb5Cdc.jpg" group-title="VOD: Drama" series-title="Breaking Bad",📺 Breaking Bad S01E02 - El gato está en la bolsa
+https://archive.org/download/BreakingBadS01E02/Breaking%20Bad%20S01E02.mp4
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/j9m2SJg5I5PIL4Uw7KbtwyzQ7WI.jpg" group-title="VOD: Documental" series-title="Cosmos",📺 Cosmos S01E01 - En la orilla del océano cósmico
+https://archive.org/download/CosmosEpisode01/Cosmos%20Episode%2001.mp4
+
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/j9m2SJg5I5PIL4Uw7KbtwyzQ7WI.jpg" group-title="VOD: Documental" series-title="Cosmos",📺 Cosmos S01E02 - Una voz en la fuga cósmica
+https://archive.org/download/CosmosEpisode02/Cosmos%20Episode%2002.mp4
+
+# Agregar más series aquí...
