@@ -1,0 +1,76 @@
+{
+  "user_info": {
+    "username": "usuario",
+    "password": "password",
+    "message": "Bienvenido a Mis Canales TV",
+    "auth": 1,
+    "status": "Active",
+    "exp_date": "20991231",
+    "is_trial": "0",
+    "active_cons": "1",
+    "created_at": "2024-01-01",
+    "max_connections": "1",
+    "allowed_output_formats": ["m3u8", "ts", "rtmp"]
+  },
+  "server_info": {
+    "url": "https://spay2024.github.io/MisCanalesTV/",
+    "port": "80",
+    "https_port": "443",
+    "server_protocol": "https",
+    "rtmp_port": "0",
+    "timezone": "America/La_Paz",
+    "timestamp_now": 1704067200,
+    "time_now": "2024-01-01 00:00:00"
+  },
+  "categories": {
+    "live": [
+      {"category_id": "1", "category_name": "General", "parent_id": 0},
+      {"category_id": "2", "category_name": "Entretenimiento", "parent_id": 0},
+      {"category_id": "3", "category_name": "Deportes", "parent_id": 0},
+      {"category_id": "4", "category_name": "Noticias", "parent_id": 0},
+      {"category_id": "5", "category_name": "Infantil", "parent_id": 0},
+      {"category_id": "6", "category_name": "Música", "parent_id": 0},
+      {"category_id": "7", "category_name": "Religión", "parent_id": 0},
+      {"category_id": "8", "category_name": "Series", "parent_id": 0},
+      {"category_id": "9", "category_name": "Películas", "parent_id": 0},
+      {"category_id": "10", "category_name": "Comedia", "parent_id": 0}
+    ],
+    "vod": [
+      {"category_id": "100", "category_name": "Acción", "parent_id": 0},
+      {"category_id": "101", "category_name": "Drama", "parent_id": 0},
+      {"category_id": "102", "category_name": "Ciencia Ficción", "parent_id": 0},
+      {"category_id": "103", "category_name": "Documental", "parent_id": 0},
+      {"category_id": "104", "category_name": "Comedia", "parent_id": 0},
+      {"category_id": "105", "category_name": "Terror", "parent_id": 0},
+      {"category_id": "106", "category_name": "Romance", "parent_id": 0},
+      {"category_id": "107", "category_name": "Aventura", "parent_id": 0}
+    ],
+    "series": [
+      {"category_id": "200", "category_name": "Drama", "parent_id": 0},
+      {"category_id": "201", "category_name": "Documental", "parent_id": 0},
+      {"category_id": "202", "category_name": "Comedia", "parent_id": 0},
+      {"category_id": "203", "category_name": "Ciencia Ficción", "parent_id": 0},
+      {"category_id": "204", "category_name": "Aventura", "parent_id": 0},
+      {"category_id": "205", "category_name": "Animación", "parent_id": 0}
+    ]
+  },
+  "available_channels": {
+    "live": 35,
+    "vod": 3,
+    "series": 4
+  },
+  "messages": [
+    {
+      "id": 1,
+      "title": "Bienvenido",
+      "message": "Gracias por usar nuestra lista de canales. Disfruta del contenido.",
+      "date": "2024-01-01"
+    },
+    {
+      "id": 2, 
+      "title": "Actualización",
+      "message": "La lista se actualiza automáticamente cada 24 horas.",
+      "date": "2024-01-01"
+    }
+  ]
+}
