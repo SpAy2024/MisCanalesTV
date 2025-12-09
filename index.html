@@ -537,5 +537,36 @@
         // Actualizar automáticamente cada 5 minutos
         setInterval(loadChannels, 5 * 60 * 1000);
     </script>
+
+    <!-- Agrega esto en la sección de URL-box o crea nueva sección -->
+
+<section class="url-box" style="margin-top: 30px;">
+    <h2>🎥 Contenido VOD (Películas y Series):</h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+        <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px;">
+            <h3>🍿 Películas</h3>
+            <code class="url" style="font-size: 0.9rem;">https://spay2024.github.io/MisCanalesTV/peliculas.m3u8</code>
+            <button class="btn" onclick="copyText('https://spay2024.github.io/MisCanalesTV/peliculas.m3u8')" style="padding: 10px 20px; margin-top: 10px;">📋 Copiar URL</button>
+        </div>
+        
+        <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px;">
+            <h3>📺 Series</h3>
+            <code class="url" style="font-size: 0.9rem;">https://spay2024.github.io/MisCanalesTV/series.m3u8</code>
+            <button class="btn" onclick="copyText('https://spay2024.github.io/MisCanalesTV/series.m3u8')" style="padding: 10px 20px; margin-top: 10px;">📋 Copiar URL</button>
+        </div>
+    </div>
+</section>
+
+<script>
+// Función para copiar texto
+function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('URL copiada: ' + text);
+    });
+}
+</script>
+
+    
 </body>
 </html>
