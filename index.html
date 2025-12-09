@@ -20,7 +20,7 @@
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 30px;
             background: rgba(255, 255, 255, 0.05);
@@ -114,21 +114,46 @@
             background: linear-gradient(90deg, #2ecc71, #27ae60);
         }
         
-        .channels {
+        .btn-refresh {
+            background: linear-gradient(90deg, #f39c12, #e67e22);
+        }
+        
+        .channels-container {
             margin-top: 40px;
             background: rgba(255, 255, 255, 0.05);
             padding: 25px;
             border-radius: 15px;
         }
         
+        .channels-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        
         .channel-item {
             background: rgba(255, 255, 255, 0.08);
             padding: 15px;
-            margin: 10px 0;
             border-radius: 10px;
             border-left: 4px solid #00b4d8;
             display: flex;
             align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .channel-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
         }
         
         .channel-logo {
@@ -137,6 +162,55 @@
             border-radius: 8px;
             margin-right: 15px;
             object-fit: cover;
+            background: #2c3e50;
+        }
+        
+        .channel-info {
+            flex: 1;
+        }
+        
+        .channel-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        
+        .channel-category {
+            font-size: 0.9rem;
+            color: #90e0ef;
+            background: rgba(0, 180, 216, 0.1);
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .channel-id {
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: 5px;
+            font-family: monospace;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #90e0ef;
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top: 4px solid #00b4d8;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         .instructions {
@@ -165,6 +239,28 @@
             font-size: 0.9rem;
         }
         
+        .filter-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .filter-input {
+            padding: 12px 20px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            border: 2px solid #00b4d8;
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .filter-input:focus {
+            outline: none;
+            border-color: #90e0ef;
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.3);
+        }
+        
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
@@ -179,6 +275,10 @@
                 margin: 10px 0;
                 text-align: center;
             }
+            
+            .channels-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -187,8 +287,8 @@
         <header>
             <div class="logo">📺</div>
             <h1>Mis Canales TV</h1>
-            <div class="status">✅ LISTA M3U8 ACTIVA</div>
-            <p>Lista personalizada de canales para IPTV</p>
+            <div class="status" id="statusIndicator">✅ CARGANDO CANALES...</div>
+            <p>Lista personalizada de canales para IPTV - Actualización automática</p>
         </header>
         
         <section class="url-box">
@@ -197,28 +297,37 @@
             
             <div style="margin-top: 20px;">
                 <button class="btn btn-copy" onclick="copyUrl()">📋 Copiar URL</button>
-                <a href="listatv.m3u8" class="btn" download>💾 Descargar Lista</a>
+                <button class="btn btn-refresh" onclick="loadChannels()">🔄 Actualizar Lista</button>
+                <a href="listatv.m3u8" class="btn" download>💾 Descargar M3U8</a>
                 <a href="https://github.com/SpAy2024/MisCanalesTV" class="btn" target="_blank">🔧 Editar en GitHub</a>
             </div>
         </section>
         
-        <section class="channels">
-            <h2>🎬 Canales Actuales:</h2>
-            <div class="channel-item">
-                <img src="https://distro.tv/img/long_logo.png" alt="Distro TV" class="channel-logo">
-                <div>
-                    <strong>Distro TV</strong><br>
-                    <small>Categoría: Crimen</small>
-                </div>
+        <section class="filter-container">
+            <input type="text" id="channelFilter" class="filter-input" 
+                   placeholder="🔍 Buscar canal por nombre o categoría..." 
+                   onkeyup="filterChannels()">
+        </section>
+        
+        <section class="channels-container">
+            <div class="channels-header">
+                <h2>🎬 Canales Disponibles:</h2>
+                <span id="channelCount" style="color: #90e0ef;">Cargando...</span>
             </div>
-            <div class="channel-item">
-                <img src="https://distro.tv/img/long_logo.png" alt="DISTRO" class="channel-logo">
-                <div>
-                    <strong>DISTRO Romance</strong><br>
-                    <small>Categoría: Romance</small>
-                </div>
+            
+            <div id="loadingChannels" class="loading">
+                <div class="loading-spinner"></div>
+                <p>Cargando lista de canales...</p>
             </div>
-            <p style="margin-top: 15px; color: #90e0ef;">Total: 2 canales configurados</p>
+            
+            <div id="channelsGrid" class="channels-grid" style="display: none;">
+                <!-- Los canales se cargarán aquí automáticamente -->
+            </div>
+            
+            <div id="noChannels" style="display: none; text-align: center; padding: 40px; color: #e74c3c;">
+                <p>❌ No se encontraron canales en la lista M3U8</p>
+                <p>Verifica que el archivo listatv.m3u8 tenga el formato correcto.</p>
+            </div>
         </section>
         
         <section class="instructions">
@@ -231,17 +340,28 @@
             </ol>
             
             <div style="margin-top: 20px; padding: 15px; background: rgba(0, 180, 216, 0.1); border-radius: 10px;">
-                <strong>💡 Consejo:</strong> Para agregar más canales, edita el archivo en GitHub
+                <strong>💡 Características:</strong> 
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li>Lista se actualiza automáticamente cuando editas el M3U8</li>
+                    <li>Buscador de canales integrado</li>
+                    <li>Contador de canales en tiempo real</li>
+                    <li>Diseño responsive para móviles</li>
+                </ul>
             </div>
         </section>
         
         <footer>
             <p>🔗 URL pública • Actualizado automáticamente • Hosteado en GitHub Pages</p>
             <p style="margin-top: 10px;">Visita: <a href="https://github.com/SpAy2024" style="color: #00b4d8;" target="_blank">github.com/SpAy2024</a></p>
+            <p style="margin-top: 5px; font-size: 0.8rem;">Última actualización: <span id="lastUpdate"></span></p>
         </footer>
     </div>
     
     <script>
+        // Variables globales
+        let allChannels = [];
+        
+        // Función para copiar URL
         function copyUrl() {
             const url = document.getElementById('m3uUrl').textContent;
             navigator.clipboard.writeText(url).then(() => {
@@ -257,22 +377,165 @@
             });
         }
         
-        // Verificar estado de la lista
-        fetch('listatv.m3u8')
-            .then(response => {
-                const status = document.querySelector('.status');
-                if (response.ok) {
-                    status.textContent = '✅ LISTA M3U8 ACTIVA';
-                    status.style.background = '#2ecc71';
-                } else {
-                    status.textContent = '⚠️ LISTA NO DISPONIBLE';
-                    status.style.background = '#e74c3c';
+        // Función para parsear archivo M3U8
+        function parseM3U8(content) {
+            const channels = [];
+            const lines = content.split('\n');
+            let currentChannel = null;
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                
+                if (line.startsWith('#EXTINF:')) {
+                    currentChannel = {
+                        name: '',
+                        logo: '',
+                        category: '',
+                        id: '',
+                        url: ''
+                    };
+                    
+                    // Extraer información del EXTINF
+                    const extinf = line;
+                    
+                    // Extraer tvg-id
+                    const idMatch = extinf.match(/tvg-id="([^"]*)"/);
+                    if (idMatch) currentChannel.id = idMatch[1];
+                    
+                    // Extraer logo
+                    const logoMatch = extinf.match(/tvg-logo="([^"]*)"/);
+                    if (logoMatch) currentChannel.logo = logoMatch[1];
+                    
+                    // Extraer categoría
+                    const groupMatch = extinf.match(/group-title="([^"]*)"/);
+                    if (groupMatch) currentChannel.category = groupMatch[1];
+                    
+                    // Extraer nombre del canal (última parte después de la última coma)
+                    const nameMatch = extinf.match(/,(.+)$/);
+                    if (nameMatch) currentChannel.name = nameMatch[1].trim();
                 }
-            })
-            .catch(() => {
-                document.querySelector('.status').textContent = '⚠️ ERROR DE CONEXIÓN';
-                document.querySelector('.status').style.background = '#e74c3c';
+                else if (line && !line.startsWith('#') && currentChannel) {
+                    // Esta línea es la URL del stream
+                    currentChannel.url = line;
+                    channels.push(currentChannel);
+                    currentChannel = null;
+                }
+            }
+            
+            return channels;
+        }
+        
+        // Función para cargar canales
+        async function loadChannels() {
+            const loadingEl = document.getElementById('loadingChannels');
+            const gridEl = document.getElementById('channelsGrid');
+            const noChannelsEl = document.getElementById('noChannels');
+            const statusEl = document.getElementById('statusIndicator');
+            const countEl = document.getElementById('channelCount');
+            
+            // Mostrar loading
+            loadingEl.style.display = 'block';
+            gridEl.style.display = 'none';
+            noChannelsEl.style.display = 'none';
+            statusEl.textContent = '🔄 CARGANDO CANALES...';
+            statusEl.style.background = '#f39c12';
+            
+            try {
+                // Cargar archivo M3U8
+                const response = await fetch('listatv.m3u8');
+                
+                if (!response.ok) {
+                    throw new Error(`Error HTTP: ${response.status}`);
+                }
+                
+                const m3uContent = await response.text();
+                
+                // Parsear canales
+                allChannels = parseM3U8(m3uContent);
+                
+                // Ocultar loading
+                loadingEl.style.display = 'none';
+                
+                if (allChannels.length === 0) {
+                    noChannelsEl.style.display = 'block';
+                    statusEl.textContent = '⚠️ LISTA VACÍA';
+                    statusEl.style.background = '#e74c3c';
+                    countEl.textContent = '0 canales';
+                } else {
+                    // Mostrar canales
+                    displayChannels(allChannels);
+                    gridEl.style.display = 'grid';
+                    statusEl.textContent = `✅ ${allChannels.length} CANALES ACTIVOS`;
+                    statusEl.style.background = '#2ecc71';
+                    countEl.textContent = `${allChannels.length} canales`;
+                    
+                    // Actualizar fecha
+                    document.getElementById('lastUpdate').textContent = new Date().toLocaleString('es-ES');
+                }
+                
+            } catch (error) {
+                console.error('Error cargando canales:', error);
+                loadingEl.style.display = 'none';
+                noChannelsEl.style.display = 'block';
+                noChannelsEl.innerHTML = `
+                    <p>❌ ERROR AL CARGAR CANALES</p>
+                    <p>${error.message}</p>
+                    <p>Verifica que el archivo listatv.m3u8 exista y sea accesible.</p>
+                `;
+                statusEl.textContent = '❌ ERROR DE CONEXIÓN';
+                statusEl.style.background = '#e74c3c';
+                countEl.textContent = 'Error';
+            }
+        }
+        
+        // Función para mostrar canales
+        function displayChannels(channels) {
+            const gridEl = document.getElementById('channelsGrid');
+            gridEl.innerHTML = '';
+            
+            channels.forEach(channel => {
+                const channelEl = document.createElement('div');
+                channelEl.className = 'channel-item';
+                channelEl.innerHTML = `
+                    <img src="${channel.logo || 'https://via.placeholder.com/50x50/2c3e50/ffffff?text=TV'}" 
+                         alt="${channel.name}" 
+                         class="channel-logo"
+                         onerror="this.src='https://via.placeholder.com/50x50/2c3e50/ffffff?text=TV'">
+                    <div class="channel-info">
+                        <div class="channel-name">${channel.name}</div>
+                        <div class="channel-category">${channel.category || 'Sin categoría'}</div>
+                        ${channel.id ? `<div class="channel-id">ID: ${channel.id}</div>` : ''}
+                    </div>
+                `;
+                gridEl.appendChild(channelEl);
             });
+        }
+        
+        // Función para filtrar canales
+        function filterChannels() {
+            const filter = document.getElementById('channelFilter').value.toLowerCase();
+            
+            if (!filter) {
+                displayChannels(allChannels);
+                document.getElementById('channelCount').textContent = `${allChannels.length} canales`;
+                return;
+            }
+            
+            const filtered = allChannels.filter(channel => 
+                channel.name.toLowerCase().includes(filter) ||
+                channel.category.toLowerCase().includes(filter) ||
+                (channel.id && channel.id.toLowerCase().includes(filter))
+            );
+            
+            displayChannels(filtered);
+            document.getElementById('channelCount').textContent = `${filtered.length} de ${allChannels.length} canales`;
+        }
+        
+        // Cargar canales al iniciar
+        document.addEventListener('DOMContentLoaded', loadChannels);
+        
+        // Actualizar automáticamente cada 5 minutos
+        setInterval(loadChannels, 5 * 60 * 1000);
     </script>
 </body>
 </html>
