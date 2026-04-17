@@ -2085,6 +2085,12 @@ http://tv.zeuspro.xyz:8080/live/alejalcala2/43ef535bdee5/98508.m3u8
 http://tv.zeuspro.xyz:8080/live/alejalcala2/43ef535bdee5/98504.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BOL-Gigavision (TV)(720)" tvg-logo="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/092024/gggg.png" group-title="BOLIVIA",BOL-Gigavision (TV)(720)
 http://tv.zeuspro.xyz:8080/live/alejalcala2/43ef535bdee5/98503.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BOL-TVU UMSA HD" tvg-logo="https://i.postimg.cc/1tv6QGb3/TVU-HD-NEW-2023.jpg" group-title="BOLIVIA",BOL-TVU UMSA HD
+https://live.enhdtv.com:8081/8190/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BOL-RED UNO SCZ" tvg-logo="https://i.postimg.cc/6QRYHkWk/RED-UNO-SC-VLC-HD-02.jpg" group-title="BOLIVIA",BOL-RED UNO SCZ
+https://www.dailymotion.com/video/x9n2qyk
+
+
 
 
 #EXTINF:-1 tvg-id="" tvg-name="CHI PPV 1 - (e)(1080)" tvg-logo="https://i.postimg.cc/D43vFj76/PPV1.png" group-title="CHILE",CHI PPV 1 - (e)(1080)
