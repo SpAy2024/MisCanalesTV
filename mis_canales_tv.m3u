@@ -2091,6 +2091,8 @@ http://tv.zeuspro.xyz:8080/live/alejalcala2/43ef535bdee5/98503.m3u8
 https://live.enhdtv.com:8081/8190/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="BOL-RED UNO SCZ" tvg-logo="https://i.postimg.cc/6QRYHkWk/RED-UNO-SC-VLC-HD-02.jpg" group-title="BOLIVIA",BOL-RED UNO SCZ
 https://www.dailymotion.com/video/x9n2qyk
+#EXTINF:-1 tvg-id="BOL-UNITEL" tvg-logo="https://i.ibb.co/pzVXZcg/UNITEL-BOLIVIA-VLC.jpg" group-title="BOLIVIA",UNITEL BOLIVIA
+https://api.videx.lol/unitel/index.m3u8?expires=9999999999&key=e9085ce91384db5b1c24c1b5f716bbf951f5100729009bb1a5b64f3e5802f9e3
 
 #EXTINF:-1 tvg-id="BOL-RTP" tvg-logo="https://i.postimg.cc/90MVPsZt/rtps2k.jpg" group-title="BOLIVIA",RTP LA PAZ HD
 https://rtp.noxun.net/hls720/stream3.m3u8
