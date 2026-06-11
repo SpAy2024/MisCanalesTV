@@ -1,9 +1,4 @@
 #EXTM3U
-
-#EXTINF:-1 tvg-id="Mundial 2026" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7WbX3JVBdvGWWtKndF1pAw8WZODAm1yBvgEj88y3Uag&s" group-title="Mexico vs Sudafrica" tvg-name="Mundial",Mundial
-https://tvazteca.cdn.mdstrm.com/live-stream-mp/dqxcdstks3rlt/9cce4f1f507b42fc83067296c48e0d64/69c5bef12b31a14e3e1c93ad/manifest_video_5_0_22579.mp4?m=1781063994
-
-
 #EXTINF:-1 tvg-id="La1.TV" tvg-logo="https://pbs.twimg.com/profile_images/2008842210414915584/zIp_go25_200x200.jpg" group-title="Generalistas" tvg-name="La 1",La 1
 https://ztnr.rtve.es/ztnr/1688877.m3u8
 #EXTINF:-1 tvg-id="La1.TV" tvg-logo="https://pbs.twimg.com/profile_images/2008842210414915584/zIp_go25_200x200.jpg" group-title="Generalistas" tvg-name="La 1",La 1
@@ -1175,3 +1170,6 @@ https://d12e4o88jd8gex.cloudfront.net/out/v1/cea3de0b76ac4e82ab8ee0fd3f17ce12/in
 https://3abn.bozztv.com/3abn2/Lat_live/smil:Lat_live.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://graph.facebook.com/3abn.org/picture?width=200&height=200" group-title="Religiosos" tvg-name="3ABN USA",3ABN USA EN
 https://3abn-live.akamaized.net/hls/live/2010543/3ABN/master.m3u8
+#EXTINF:-1 tvg-logo="Mundial 2026" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7WbX3JVBdvGWWtKndF1pAw8WZODAm1yBvgEj88y3Uag&s" group-title="Mexico vs Sudafrica" tvg-name="Mundial",Mundial
+https://tvazteca.cdn.mdstrm.com/live-stream-mp/dqxcdstks3rlt/9cce4f1f507b42fc83067296c48e0d64/69c5bef12b31a14e3e1c93ad/manifest_video_5_0_22579.mp4?m=1781063994
+
