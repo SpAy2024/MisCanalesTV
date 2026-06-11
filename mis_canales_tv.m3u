@@ -1170,3 +1170,6 @@ https://d12e4o88jd8gex.cloudfront.net/out/v1/cea3de0b76ac4e82ab8ee0fd3f17ce12/in
 https://3abn.bozztv.com/3abn2/Lat_live/smil:Lat_live.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://graph.facebook.com/3abn.org/picture?width=200&height=200" group-title="Religiosos" tvg-name="3ABN USA",3ABN USA EN
 https://3abn-live.akamaized.net/hls/live/2010543/3ABN/master.m3u8
+
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI5ONWSqBpyw35TJxpdOK2GLpRCxZA1TacOQ&s" group-title="DEPORTE" tvg-name="Mexico vs Sudafrica",Mexico vs Sudafrica
+https://rtruc7yb.12703830.net:8443/hls/53qmo.m3u8?s=B8OalRqKUWhsWgib1IQ4zQ&e=1781227976
