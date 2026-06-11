@@ -1,4 +1,9 @@
 #EXTM3U
+
+#EXTINF:-1 tvg-id="Mundial 2026" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7WbX3JVBdvGWWtKndF1pAw8WZODAm1yBvgEj88y3Uag&s" group-title="Mexico vs Sudafrica" tvg-name="La 1",La 1
+https://tvazteca.cdn.mdstrm.com/live-stream-mp/dqxcdstks3rlt/9cce4f1f507b42fc83067296c48e0d64/69c5bef12b31a14e3e1c93ad/manifest_video_5_0_22579.mp4?m=1781063994
+
+
 #EXTINF:-1 tvg-id="La1.TV" tvg-logo="https://pbs.twimg.com/profile_images/2008842210414915584/zIp_go25_200x200.jpg" group-title="Generalistas" tvg-name="La 1",La 1
 https://ztnr.rtve.es/ztnr/1688877.m3u8
 #EXTINF:-1 tvg-id="La1.TV" tvg-logo="https://pbs.twimg.com/profile_images/2008842210414915584/zIp_go25_200x200.jpg" group-title="Generalistas" tvg-name="La 1",La 1
