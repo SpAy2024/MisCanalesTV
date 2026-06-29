@@ -2,7 +2,7 @@
 #EXTINF:-1 group-title="-",13 C
 http://190.108.83.69:8000/play/a02o/index.m3u8
 
-#EXTINF:-1 tvg-id="Bolivia" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/34/Bolivisi%C3%B3nHD.png" group-title="Bolivision
+#EXTINF:-1 tvg-id="Bolivia" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/34/Bolivisi%C3%B3nHD.png" group-title="Bolivia,BOLIVISION HD
 https://d1mws3umreue1g.cloudfront.net/index.m3u8
 
 #EXTINF:-1 group-title="-",A&E HD
